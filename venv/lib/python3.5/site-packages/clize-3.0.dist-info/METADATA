@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: clize
+Version: 3.0
+Summary: Command-line argument parsing for Python, without the effort
+Home-page: https://github.com/epsy/clize
+Author: Yann Kaiser
+Author-email: kaiser.yann@gmail.com
+License: MIT
+Keywords: CLI,options,arguments,getopts,getopt,argparse,introspection,flags,decorator,subcommands
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Dist: six
+Requires-Dist: sigtools (>=0.1b2)
+Requires-Dist: ordereddict; python_version in "2.6"
+Provides-Extra: datetime
+Requires-Dist: python-dateutil; extra == 'datetime'
+
+UNKNOWN
+
+
