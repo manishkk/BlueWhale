@@ -45,16 +45,19 @@ def index(request):
        # pcap =Pcap(pcap.data)
 
         answer.extend ( [
-                str('Time Stamp:'.format()),
-                str('Destination MAC: {}, Source MAC: {}, Protocol: {}'.format ( eth.dest_mac ,eth.src_mac, eth.proto)),
-                str('IP Version: {}, IP Header Length: {}, TTL: {},'.format(ipv4.version, ipv4.header_length, ipv4.ttl)),
-                str('Protocol: {}, Source IP: {}, Target IP: {}'.format(ipv4.proto, ipv4.src, ipv4.target)),
-                str('Source Port: {}, Destination Port: {}'.format(tcp.src_port, tcp.dest_port)),
-                str('Source Port: {}, Destination Port: {}, Length: {}'.format(udp.src_port, udp.dest_port, udp.size))
+              
+
+                str ('<head><style>table, th, td {border: 1px solid black;border-collapse: collapse;}</style></head><body><table>' ) ,
+                str ('<tr><th></th><th>Time Stamp:</th><th></th></tr>'.format ( ) ) ,
+                str ('<tr><th>Destination MAC: {}</th><th>Source MAC: {}</th><th>Protocol: {}</th></tr>'.format (eth.dest_mac , eth.src_mac , eth.proto ) ) ,
+                str ('<tr><th>IP Version: {}</th><th>IP Header Length: {}</th><th>TTL: {}</th></tr>'.format ( ipv4.version , ipv4.header_length ,ipv4.ttl ) ) ,
+                str ('<tr><th>Protocol: {}</th><th>Source IP: {}</th><th>Target IP: {}</th></tr>'.format ( ipv4.proto ,ipv4.src ,ipv4.target ) ) ,
+                str ('<tr><th>Source Port: {}</th><th>Destination Port: {}</th><th></th></tr>'.format ( tcp.src_port ,tcp.dest_port ) ) ,
+                str ('<tr><th>Source Port: {}</th><th>Destination Port: {}</th><th>Length: {}</th></tr>'.format (udp.src_port , udp.dest_port , udp.size ) ) ,
+                str ( '</table></body>' )
+
         ])
 
         answer.append (" ")
 
     return HttpResponse("<br>".join(answer))
-
-
