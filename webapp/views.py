@@ -33,10 +33,7 @@ def index(request):
         tcp = TCP ( ipv4.data )
         udp = UDP ( ipv4.data )
 
-        answer += '<tr><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th></tr>'.format (
-                timestamp , eth.dest_mac , eth.src_mac , eth.proto , ipv4.version , ipv4.header_length , ipv4.ttl ,
-                ipv4.proto , ipv4.src , ipv4.target , tcp.src_port , tcp.dest_port , udp.src_port , udp.dest_port ,
-                udp.size )
+        answer += '<tr><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th></tr>'.format (timestamp , eth.dest_mac , eth.src_mac , eth.proto , ipv4.version , ipv4.header_length , ipv4.ttl , ipv4.proto , ipv4.src , ipv4.target , tcp.src_port , tcp.dest_port , udp.src_port , udp.dest_port , udp.size )
 
     answer += '</table></body>'
 
