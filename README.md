@@ -1,4 +1,4 @@
-# BlueWhale- Threat Assessment :Detect and analyze malware traffic in your network captures
+# BlueWhale- Threat Assessment : Detect and analyze malware traffic in your network captures
 
 
 Pcap Parser unpack data bitwise
