@@ -1,4 +1,6 @@
-# Pcap_Parser
+# BlueWhale- Threat Assessment :Detect and analyze malware traffic in your network captures
+
+
 Pcap Parser unpack data bitwise
 
 // Print fetched inforamtion in a table form
