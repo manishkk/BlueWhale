@@ -23,10 +23,10 @@ def index(request):
 
     answer += '<head><style>table, th, td {border: 1px solid black;border-collapse: collapse;}</style></head><body><table><tr><th>Time Stamp</th><th>Destination MAC</th><th>Source MAC</th><th>Protocol</th><th>IP Version</th><th>IP Header Length</th><th>TTL</th><th>Protocol</th><th>Source IP</th><th>Target IP</th><th>Source Port</th><th>Destination Port</th><th>Length</th></tr>'
     for raw_data in range ( 5 ):
-        raw_data , addr = s.recvfrom ( 65565 )
-        pcap.write ( raw_data )
-        unpacked = struct.unpack ( '@ I H H i I I I I I I I' , raw_data[:40] )
-        timestamp = time.strftime ( '%Y-%m-%d %H:%M:%S' , time.localtime ( unpacked ) )
+        data , addr = s.recvfrom ( 65565 )
+        pcap.write ( data )
+        unpacked = struct.unpack ( '@ I H H i I I I I I I I' , data[:40] )
+        timestamp = time.strftime ( '%Y-%m-%d %H:%M:%S' , time.localtime (unpacked) )
         eth = Ethernet ( raw_data )
         ipv4 = IPv4 ( eth.data )
         icmp = ICMP ( ipv4.data )
